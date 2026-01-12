@@ -19,151 +19,33 @@
         </div>
 
         <div class="sh-menu">
-          <a href="" class="login-btn">Login</a>
-          <a href="">Become a Seller</a>
-          <a href="">More</a>
           <a href="">🛒 Cart</a>
+          <a href="">Become a Seller</a>
+          <a href="" class="login-btn">Login</a>
+         
+          
         </div>
       </div>
     </header>
 
-    <!-- Categorybar -->
+      <!-- Sliding Gift Box Popup -->
+<div class="gift-popup" id="giftPopup">
+  <div class="popup-close" onclick="closeGiftPopup()">×</div>
+  <div class="gift-box" id="giftBox" onclick="openGift()">
+    🎁
+  </div>
+  <div class="popup-text" id="popupText">
+    Open me for exciting deals!
+  </div>
 
-    <div class="category-bar">
-      <ul class="category-list">
-        <a href="" class="category-item">
-          <img src="./images/Electronics.webp" alt="Electronics" />
-          <span>Electronics</span>
-        </a>
-
-        <a href="" class="category-item">
-          <img src="./images/Fashion.webp" alt="Fashion" />
-          <span>Fashion</span>
-        </a>
-
-        <a href="" class="category-item">
-          <img src="./images/Home.webp" alt="Home & Furnitures" />
-          <span>Home & Furnitures</span>
-        </a>
-
-        <a href="" class="category-item">
-          <img src="./images/Groceries.webp" alt="Grocery" />
-          <span>Grocery</span>
-        </a>
-
-        <a href="" class="category-item">
-          <img src="./images/Beauty.webp" alt="Beauty & Toys" />
-          <span>Beauty & Toys</span>
-        </a>
-
-        <a href="" class="category-item">
-          <img src="./images/TVs & Appliances.webp" alt="TVs & Appliances" />
-          <span>TVs & Appliances</span>
-        </a>
-      </ul>
-    </div>
-
-    <!--hero section-->
-    <section class="hero">
-      <input type="radio" name="slider" id="s1" checked />
-      <input type="radio" name="slider" id="s2" />
-      <input type="radio" name="slider" id="s3" />
-
-      <div class="slider">
-        <div class="slide slide1">
-          <img src="./images/image-1.webp" />
-          <div class="slide-content"></div>
-
-          <label for="s3" class="nav prev">&#10094;</label>
-          <label for="s2" class="nav next">&#10095;</label>
-        </div>
-
-        <div class="slide slide2">
-          <img src="./images/image-2.webp" />
-          <div class="slide-content"></div>
-
-          <label for="s1" class="nav prev">&#10094;</label>
-          <label for="s3" class="nav next">&#10095;</label>
-        </div>
-
-        <div class="slide slide3">
-          <img src="./images/image-3.webp" />
-          <div class="slide-content"></div>
-
-          <label for="s2" class="nav prev">&#10094;</label>
-          <label for="s1" class="nav next">&#10095;</label>
-        </div>
-      </div>
-    </section>
-
-    <!--Top Deals Bar Section-->
-    <section class="top-deals">
-      <h2 class="section-title">Top Deals</h2>
-      <div class="deals-row">
-        <div class="deal-item">
-          <a href="product-earbuds.html" class="deal-item">
-            <img src="./images/earbuds.webp" alt="earbuds" />
-          </a>
-
-          <p class="deal-title">Best Wireless Headsets</p>
-          <p class="deal-price">From Rs. 399</p>
-        </div>
-
-         <div class="deal-item">
-          <a href="product-suitcase.html" class="deal-item">
-            <img src="./images/suitcase.webp" alt="suitcase" />
-          </a>
-          <p class="deal-title">Suitcase</p>
-          <p class="deal-price">Min. 60% Off</p>
-        </div>
-
-        <div class="deal-item">
-          <a href="product-laptop.html" class="deal-item">
-            <img src="./images/laptop.webp" alt="earbuds" />
-          </a>
-          <p class="deal-title">High-End Laptop</p>
-          <p class="deal-price">From Rs. 39,999</p>
-        </div>
-
-         <div class="deal-item">
-          <a href="product-Perfume.html" class="deal-item">
-            <img src="./images/perfume.webp" alt="perfume" />
-          </a>
-          <p class="deal-title">Perfume & more</p>
-          <p class="deal-price">Min. 50% Off</p>
-        </div>
-
-        <div class="deal-item">
-          <a href="product-smartwatch.html" class="deal-item">
-            <img src="./images/smartwatch.webp" alt="earbuds" />
-          </a>
-          <p class="deal-title">Fasttrack Smartwatch</p>
-          <p class="deal-price">From Rs. 1,399</p>
-        </div>
-
-        <div class="deal-item">
-          <a href="product-smartphone.html" class="deal-item">
-            <img src="./images/smartphone.webp" alt="smartphone" />
-          </a>
-          <p class="deal-title">Latest Smartphones</p>
-          <p class="deal-price">From Rs. 10,999</p>
-        </div>
-
-        <div class="deal-item">
-          <a href="product-Laptopbags.html" class="deal-item">
-            <img src="./images/Laptopbags.webp" alt="Laptopbag" />
-          </a>
-          <p class="deal-title">Laptop Bags</p>
-          <p class="deal-price">Min. 70% Off</p>
-        </div>
-
-       
-
-       
-
-      </div>
-    </section>
+   <div class="offer-cards" id="offerCards">
+    <div class="card" data-offer="🎉 You got 10% OFF!"onclick="chooseCard(this)">🎁 Offer 1</div>
+    <div class="card" data-offer="🔥 Flat ₹500 OFF!"onclick="chooseCard(this)">🎁 Offer 2</div>
+    <div class="card"  data-offer="🚚 Free Delivery!" onclick="chooseCard(this)">🎁 Offer 3</div>
+  </div>
+</div>
+    <script src="./js/script.js"></script>
 
 
-  </body>
-</html>
+    </body>
+    </html>
