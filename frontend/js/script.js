@@ -1,28 +1,37 @@
-//Gift-popup
-  setTimeout(() => {
-    document.getElementById('giftPopup').classList.add('active');
-  }, 2000);
+// HERO BUTTON SCROLL
+function scrollToCategories() {
+  const categoriesSection = document.getElementById("categories");
+  categoriesSection.scrollIntoView({ behavior: "smooth" });
+}
 
-  // Close popup
-  function closeGiftPopup() {
-    document.getElementById('giftPopup').classList.remove('active');
-  }
+// GIFT POPUP FUNCTIONS
+function openGiftPopup() {
+  document.getElementById("giftPopup").classList.add("show");
+  document.body.style.overflow = "hidden";
+}
 
-  function openGift() {
-  document.getElementById('giftBox').style.display = 'none';
-  document.getElementById('popupText').style.display = 'none';
-  document.getElementById('offerCards').style.display = 'flex';
+function closeGiftPopup() {
+  document.getElementById("giftPopup").classList.remove("show");
+  document.body.style.overflow = "auto";
+}
+
+function openGift() {
+  document.getElementById("giftBox").style.display = "none";
+  document.getElementById("popupText").innerText = "Pick a card to reveal your offer 🎉";
+  document.getElementById("offerCards").style.display = "flex";
 }
 
 function chooseCard(card) {
   const offer = card.getAttribute("data-offer");
-  card.textContent = offer;
 
-  document.querySelectorAll('.card').forEach(c => {
-    if (c !== card) {
-      c.style.opacity = 0.4;
-      c.style.pointerEvents = "none";
-    }
-  });
+  // Hide offer cards
+  document.getElementById("offerCards").style.display = "none";
+  document.getElementById("popupText").style.display = "none";
+
+  // Show result box
+  const offerResult = document.getElementById("offerResult");
+  const offerText = document.getElementById("offerText");
+
+  offerText.innerText = offer;
+  offerResult.style.display = "flex";
 }
-

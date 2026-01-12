@@ -27,23 +27,65 @@
         </div>
       </div>
     </header>
+<section class="hero">
+  <div class="hero-container">
+
+    <!-- LEFT TEXT -->
+    <div class="hero-text">
+      <h1>Everything Your Home & Lifestyle Needs</h1>
+      <p>Furniture, decor, gadgets, fashion & more — all in one place!</p>
+      <div class="hero-buttons">
+        <button class="btn primary" onclick="scrollToCategories()">Shop All Categories</button>
+        <button class="btn secondary" onclick="openGiftPopup()">Reveal Your Surprise 🎁</button>
+      </div>
+    </div>
+
+    <!-- FLOATING CATEGORY ICONS -->
+    <div class="floating-icons">
+      <span class="icon">🛋️</span>
+      <span class="icon">🕶️</span>
+      <span class="icon">🎻</span>
+      <span class="icon">👗</span>
+      <span class="icon">👟</span>
+      <span class="icon">👜</span>
+      <span class="icon">🧸</span>
+      <span class="icon">💻</span>
+      <span class="icon">⌚</span>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- CATEGORY SECTION (Scroll target) -->
+  <section id="categories">
+    <h2>All Categories</h2>
+    <!-- Add your categories here -->
+  </section>
 
       <!-- Sliding Gift Box Popup -->
+ <!-- GIFT POPUP -->
 <div class="gift-popup" id="giftPopup">
   <div class="popup-close" onclick="closeGiftPopup()">×</div>
-  <div class="gift-box" id="giftBox" onclick="openGift()">
-    🎁
-  </div>
-  <div class="popup-text" id="popupText">
-    Open me for exciting deals!
+
+  <!-- Gift Box -->
+  <div class="gift-box" id="giftBox" onclick="openGift()">🎁</div>
+  <div class="popup-text" id="popupText">Open me for exciting deals!</div>
+
+  <!-- Offer Cards -->
+  <div class="offer-cards" id="offerCards">
+    <div class="card" data-offer="🎉 You got 10% OFF!" onclick="chooseCard(this)">🎁 Offer 1</div>
+    <div class="card" data-offer="🔥 Flat ₹500 OFF!" onclick="chooseCard(this)">🎁 Offer 2</div>
+    <div class="card" data-offer="🚚 Free Delivery!" onclick="chooseCard(this)">🎁 Offer 3</div>
   </div>
 
-   <div class="offer-cards" id="offerCards">
-    <div class="card" data-offer="🎉 You got 10% OFF!"onclick="chooseCard(this)">🎁 Offer 1</div>
-    <div class="card" data-offer="🔥 Flat ₹500 OFF!"onclick="chooseCard(this)">🎁 Offer 2</div>
-    <div class="card"  data-offer="🚚 Free Delivery!" onclick="chooseCard(this)">🎁 Offer 3</div>
+  <!-- Offer Result -->
+  <div class="offer-result" id="offerResult">
+    <p id="offerText"></p>
+    <button class="btn primary" onclick="closeGiftPopup()">Claim & Close</button>
   </div>
 </div>
+
     <script src="./js/script.js"></script>
 
 
